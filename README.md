@@ -6,24 +6,39 @@ TODO: Write a gem description
 
 Add this line to your application's Gemfile:
 
-    gem 'insulate'
+```ruby
+gem 'insulate'
+```
 
 And then execute:
 
-    $ bundle
+```bash
+$ bundle install
+```
 
-Or install it yourself as:
+Lastly, add the following line to the application.js manifest after `//= require jquery` and before `//= require_tree .`:
 
-    $ gem install insulate
+```
+//= require insulate
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+It's all very simple. For every controller action that you want to hook into, just add a callback function to a global `Insulate` object. The key must be a string in the format `controller#action`.
 
-## Contributing
+CoffeeScript example:
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+```coffeescript
+Insulate['users#new'] = ->
+  alert 'Create a new user!'
+```
+
+JavaScript example:
+
+```javascript
+Insulate['users#edit'] = function() {
+    alert('Edit an existing user!');
+};
+```
+
+Any callback function you define this way will be executed on jQuery's `$(document).ready()` event (hence why jQuery is a dependency of this gem).

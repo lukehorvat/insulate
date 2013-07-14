@@ -1,6 +1,10 @@
 # Insulate
 
-TODO: Write a gem description
+*"Page-specific JavaScript".*
+
+Easily partition your JavaScript code based on controller actions. Works great with Rails' asset pipeline default configuration (i.e. all JavaScript concatenated into one huge application.js file).
+
+This gem is a fork of [Paloma](https://github.com/kbparagua/paloma), an excellent and much more comprehensive page-specific JavaScript solution. What does it do differently? Basically, I've just removed a lot of the shiny features and fluff in order to provide something that is extremely simple, compact, and *just works*. Think of it as Paloma Lite.
 
 ## Installation
 
@@ -37,7 +41,7 @@ JavaScript example:
 
 ```javascript
 Insulate['users#edit'] = function() {
-    alert('Edit an existing user!');
+  alert('Edit an existing user!');
 };
 ```
 

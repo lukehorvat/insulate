@@ -22,21 +22,19 @@ $ bundle install
 
 ## Usage
 
-It's all very simple. For every controller action that you want to hook into, just add a callback function to a global `Insulate` object. The key must be a string in the format `controller#action`.
+It's all very simple. Installing this gem automatically injects (at runtime) a global string variable, `INSULATE_PAGE_ID`, into every page served by your app. This string is always in the format `controller#action`, so if you want to conditionally execute some JavaScript code based on the current controller action, just check the value of this variable.
 
 CoffeeScript example:
 
 ```coffeescript
-Insulate['users#new'] = ->
+if INSULATE_PAGE_ID is 'users#new'
   alert 'Create a new user!'
 ```
 
 JavaScript example:
 
 ```javascript
-Insulate['users#edit'] = function() {
+if (INSULATE_PAGE_ID === 'users#edit') {
   alert('Edit an existing user!');
-};
+}
 ```
-
-Any callback function you define this way will be executed on jQuery's `$(document).ready()` event (hence why jQuery is a dependency of this gem).

@@ -6,4 +6,3 @@ end
 
 require 'insulate/version'
 require 'insulate/action_controller_filters'
-require 'insulate/rails/engine'

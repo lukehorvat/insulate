@@ -20,12 +20,6 @@ And then execute:
 $ bundle install
 ```
 
-After that, add the following line to the application.js manifest before `//= require_tree .`:
-
-```
-//= require insulate
-```
-
 ## Usage
 
 It's all very simple. For every controller action that you want to hook into, just add a callback function to a global `Insulate` object. The key must be a string in the format `controller#action`.

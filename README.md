@@ -20,7 +20,7 @@ And then execute:
 $ bundle install
 ```
 
-Lastly, add the following line to the application.js manifest after `//= require jquery` and before `//= require_tree .`:
+After that, add the following line to the application.js manifest before `//= require_tree .`:
 
 ```
 //= require insulate

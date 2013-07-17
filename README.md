@@ -2,9 +2,7 @@
 
 *"Page-specific JavaScript and CSS".*
 
-Easily partition your JavaScript and CSS based on controller actions. Works great with Rails' default asset pipeline configuration (i.e. all JavaScript and CSS concatenated into their respective files). Generally recommended only for small Rails applications where you have a direct one-to-one mapping between controller actions and views.
-
-This gem is a fork of [Paloma](https://github.com/kbparagua/paloma), an excellent and much more comprehensive page-specific JavaScript solution. What does it do differently? Basically, I've just removed a lot of the shiny features and fluff in order to provide something that is extremely simple, compact, and *just works*. Think of it as Paloma Lite.
+Easily partition your JavaScript and CSS based on controller actions. Works great with Rails' default asset pipeline configuration (i.e. all JavaScript and CSS concatenated into application.js and application.css respectively). Generally recommended only for small Rails applications where you have a direct one-to-one mapping between controller actions and views and don't mind introducing a little coupling.
 
 ## Installation
 
@@ -71,3 +69,7 @@ LESS example:
   }
 }
 ```
+
+## Contributing
+
+My intention with this gem is to keep it as simple and lean as it currently is, so do keep that in mind when submitting pull requests. If you want more advanced functionality, it's worth having a look at [Paloma](https://github.com/kbparagua/paloma), an excellent gem that provides a much more comprehensive page-specific JavaScript solution.

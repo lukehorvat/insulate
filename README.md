@@ -2,7 +2,7 @@
 
 *"Page-specific JavaScript and CSS".*
 
-Easily partition your JavaScript and CSS based on controller actions. Works great with Rails' default asset pipeline configuration (i.e. all JavaScript and CSS concatenated into application.js and application.css respectively). Generally recommended only for small Rails applications where you have a direct one-to-one mapping between controller actions and views and don't mind introducing a little coupling.
+Easily partition your JavaScript and CSS based on controller actions. Works great with Rails' default asset pipeline configuration (i.e. all JavaScript and CSS concatenated into application.js and application.css respectively). Generally recommended only for small Rails applications where you have a direct one-to-one mapping between controller actions and views, and don't mind introducing a little coupling.
 
 ## Installation
 
@@ -42,12 +42,12 @@ Furthermore, this gem also appends a special CSS class to the `<body>` element o
 CSS example:
 
 ```css
-.insulate-page-studies-index h1
+.insulate-page-users-show h1
 {
   color: red;
 }
 
-.insulate-page-studies-index p
+.insulate-page-users-show p
 {
   color: blue;
 }
@@ -56,7 +56,7 @@ CSS example:
 LESS example:
 
 ```less
-.insulate-page-studies-index
+.insulate-page-users-show
 {
   h1
   {

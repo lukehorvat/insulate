@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Insulate::VERSION
   spec.authors       = ["Luke Horvat"]
   spec.email         = ["lukehorvat@gmail.com"]
-  spec.description   = %q{Simple page-specific JavaScript solution for small Ruby on Rails applications.}
-  spec.summary       = %q{Simple page-specific JavaScript solution for small Rails apps.}
+  spec.description   = %q{A simple page-specific JavaScript and CSS solution for small Ruby on Rails applications.}
+  spec.summary       = %q{A simple page-specific JavaScript and CSS solution for small Rails apps.}
   spec.homepage      = "https://github.com/lukehorvat/insulate"
   spec.license       = "MIT"
 

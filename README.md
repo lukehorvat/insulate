@@ -1,4 +1,4 @@
-# Insulate
+# Insulate [![Gem version](http://img.shields.io/gem/v/insulate.svg?style=flat)](http://rubygems.org/gems/insulate)
 
 *"Page-specific JavaScript and CSS".*
 
